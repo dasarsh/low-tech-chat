@@ -38,6 +38,12 @@ jobs:
           cat chat-temp.txt > chat.txt
           cat chat.txt
           
+      - name: Remove temp files
+        run: |
+          rm chat-temp.txt
+          rm message-temp.txt
+          rm message-details-temp.txt
+          
       - name: Git work
         run: |
           git config --local user.name "runner"
@@ -46,10 +52,4 @@ jobs:
           git add *.txt
           git status
           git commit -m 'Added message from ${{ github.event.pusher.name }}'
-          git push origin master
-          
-      - name: Remove temp files
-        run: |
-          rm chat-temp.txt
-          rm message-temp.txt
-          rm message-details-temp.txt
+          git push origin master      
