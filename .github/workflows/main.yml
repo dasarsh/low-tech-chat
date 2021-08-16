@@ -39,4 +39,4 @@ jobs:
       - name: Copy
         run: |
           cat chat.txt message.txt > chat-temp.txt
-          cat chat-temp.txt
+          cat chat-temp.txt > chat.txt
