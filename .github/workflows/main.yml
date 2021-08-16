@@ -24,32 +24,30 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
-
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
       
       # Runs a single command using the runners shell
-      - name: Copy
+      - name: Create formatted message
         run: |
           cat "[$(date +'%Y-%m-%d %H:%M')] ${{ github.event.pusher.name }}> " message.txt > message-temp.txt
           cat message-temp.txt
+        
+      - name: Update chat
+        run: |
           cat chat.txt message-temp.txt > chat-temp.txt
           cat chat-temp.txt > chat.txt
           cat chat.txt
-          rm chat-temp.txt
-          rm message-temp.txt
-          ls -l
+          
+      - name: Git work
+        run: |
           git config --local user.name "runner"
-          git add chat.txt
-          git status
           rm message.txt
           touch message.txt
+          git add *.txt
+          git status
           git commit -m 'Added message from ${{ github.event.pusher.name }}'
           git push origin master
+          
+      - name: Remove temp files
+        run: |
+          rm chat-temp.txt
+          rm message-temp.txt
