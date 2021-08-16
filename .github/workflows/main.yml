@@ -47,3 +47,4 @@ jobs:
           git add chat.txt
           git status
           git commit -m 'Runner editing chat.txt'
+          git push origin master
