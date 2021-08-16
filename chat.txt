@@ -1,4 +1,4 @@
 *Welcome to the chat*
 [2021-08-16 12:16] dasarsh> 
 Wow a low tech chat[2021-08-16 12:17] dasarsh> 
-Yup this is truly low tech
+Yup this is truly low tech\n[2021-08-16 12:18] dasarsh> 
