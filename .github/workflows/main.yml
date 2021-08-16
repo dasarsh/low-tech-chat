@@ -38,10 +38,12 @@ jobs:
       # Runs a single command using the runners shell
       - name: Copy
         run: |
-          cat chat.txt message.txt > chat-temp.txt
+          cat "[NOW::$(date +'%Y-%m-%dT%H:%M:%S')] ${{ github.event.pusher.name }}> " message.text > message-temp.text
+          cat chat.txt message-temp.txt > chat-temp.txt
           cat chat-temp.txt > chat.txt
           cat chat.txt
           rm chat-temp.txt
+          rm message-temp.txt
           ls -l
           git config --local user.name "runner"
           git add chat.txt
