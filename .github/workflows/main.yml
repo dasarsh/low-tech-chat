@@ -34,7 +34,7 @@ jobs:
         
       - name: Update chat
         run: |
-          cat chat.md message-temp.md > chat-temp.md
+          cat chat.md message-temp.txt > chat-temp.md
           cat chat-temp.md > chat.md
           cat chat.md
           
