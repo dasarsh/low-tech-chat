@@ -40,3 +40,5 @@ jobs:
         run: |
           cat chat.txt message.txt > chat-temp.txt
           cat chat-temp.txt > chat.txt
+          cat chat.txt
+          touch temp.txt
