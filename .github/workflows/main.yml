@@ -46,4 +46,5 @@ jobs:
           rm chat-temp.txt
           git add chat.txt
           git commit -m 'Updated chat.txt'
+          git config user.name "github actions"
           git push origin master
