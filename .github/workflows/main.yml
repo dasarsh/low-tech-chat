@@ -46,5 +46,7 @@ jobs:
           git config --local user.name "runner"
           git add chat.txt
           git status
-          git commit -m 'Runner editing chat.txt'
+          rm message.txt
+          touch message.txt
+          git commit -m 'Added message from ${{ github.event.pusher.name }}'
           git push origin master
