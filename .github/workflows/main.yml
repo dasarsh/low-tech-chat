@@ -28,7 +28,8 @@ jobs:
       # Runs a single command using the runners shell
       - name: Create formatted message
         run: |
-          echo "[$(date +'%Y-%m-%d %H:%M')] ${{ github.event.pusher.name }}> " message.txt > message-temp.txt
+          echo "[$(date +'%Y-%m-%d %H:%M')] ${{ github.event.pusher.name }}> " > message-details-temp.txt
+          cat message-details-temp.txt message.txt > message-temp.txt
           cat message-temp.txt
         
       - name: Update chat
@@ -51,3 +52,4 @@ jobs:
         run: |
           rm chat-temp.txt
           rm message-temp.txt
+          rm message-details-temp.txt
