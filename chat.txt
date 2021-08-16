@@ -9,3 +9,7 @@ Hello
 [2021-08-16 12:07] dasarsh> 
 Hello again
 [2021-08-16 12:09] dasarsh> 
+[2021-08-16 12:12] dasarsh> 
+This is a
+multi line
+   message
