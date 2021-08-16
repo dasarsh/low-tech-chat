@@ -41,11 +41,9 @@ jobs:
           cat chat.txt message.txt > chat-temp.txt
           cat chat-temp.txt > chat.txt
           cat chat.txt
+          rm chat-temp.txt
           ls -l
           git status
-          rm chat-temp.txt
           git add chat.txt
           git commit -m 'Updated chat.txt'
-          git config --global user.name "github actions"
-          git config --global user.email "github.actions@example.com"
-          git push origin master
+          git config --global --list
