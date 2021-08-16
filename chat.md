@@ -1,4 +1,4 @@
-#*Welcome to the chat*
+# *Welcome to the chat*
 ##### [2021-08-16 12:16] dasarsh> 
 Wow a low tech chat
 ##### [2021-08-16 12:17] dasarsh> 
