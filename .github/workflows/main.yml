@@ -42,3 +42,4 @@ jobs:
           cat chat-temp.txt > chat.txt
           cat chat.txt
           touch temp.txt
+          ls -l
