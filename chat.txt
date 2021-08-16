@@ -4,4 +4,5 @@ Wow a low tech chat[2021-08-16 12:17] dasarsh>
 Yup this is truly low tech\n[2021-08-16 12:18] dasarsh> 
 [2021-08-16 12:26] dasarsh> 
 [2021-08-16 12:29] dasarsh> 
-test
+test[2021-08-16 12:34] dasarsh> 
+test again!
