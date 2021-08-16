@@ -38,7 +38,7 @@ jobs:
       # Runs a single command using the runners shell
       - name: Copy
         run: |
-          cat "[$(date +'%Y-%m-%d %H:%M')] ${{ github.event.pusher.name }}> " message.text > message-temp.txt
+          cat "[$(date +'%Y-%m-%d %H:%M')] ${{ github.event.pusher.name }}> " message.txt > message-temp.txt
           cat message-temp.txt
           cat chat.txt message-temp.txt > chat-temp.txt
           cat chat-temp.txt > chat.txt
