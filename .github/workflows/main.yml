@@ -34,13 +34,13 @@ jobs:
         
       - name: Update chat
         run: |
-          cat chat.txt message-temp.txt > chat-temp.txt
-          cat chat-temp.txt > chat.txt
-          cat chat.txt
+          cat chat.md message-temp.md > chat-temp.md
+          cat chat-temp.md > chat.md
+          cat chat.md
           
       - name: Remove temp files
         run: |
-          rm chat-temp.txt
+          rm chat-temp.md
           rm message-temp.txt
           rm message-details-temp.txt
           
@@ -49,7 +49,7 @@ jobs:
           git config --local user.name "runner"
           rm message.txt
           touch message.txt
-          git add *.txt
+          git add chat.md message.txt
           git status
           git commit -m 'Added message from ${{ github.event.pusher.name }}'
           git push origin master      
