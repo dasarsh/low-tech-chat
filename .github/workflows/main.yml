@@ -44,6 +44,6 @@ jobs:
           rm chat-temp.txt
           ls -l
           git status
+          git config --local user.name "runner"
           git add chat.txt
-          git commit -m 'Updated chat.txt'
-          git config --global --list
+          git status
