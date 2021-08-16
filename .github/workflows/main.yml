@@ -43,3 +43,7 @@ jobs:
           cat chat.txt
           ls -l
           git status
+          rm chat-temp.txt
+          git add chat.txt
+          git commit -m 'Updated chat.txt'
+          git push origin master
